@@ -11,7 +11,7 @@ curl_setopt_array($curl, array(
   CURLOPT_FOLLOWLOCATION => true,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => 'POST',
-  CURLOPT_POSTFIELDS => array('chat_id' => $chatId,'document'=> new CURLFILE('test' .'.sql')),
+  CURLOPT_POSTFIELDS => array('chat_id' => $chatId,'document'=> new CURLFILE('/var/www/html/HIS_DB_'. date('Y-m-d') .'_db.sql')),
   // CURLOPT_POSTFIELDS => array('chat_id' => $chatId,'document'=> new CURLFILE(rand() . date('Y-m-d') .'_db.sql')),
 ));
 
